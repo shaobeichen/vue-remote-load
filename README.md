@@ -3,6 +3,7 @@
 Vue load remote component. 如何加载 Vue 远程组件。
 
 下图为演示效果及解释。
+
 ![preview](./assets/image.png)
 
 # 生产者使用 (远程组件方)
