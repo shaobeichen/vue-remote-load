@@ -13,6 +13,7 @@ import { defineAsyncComponent, ref, markRaw } from 'vue'
 import type { Component } from 'vue'
 import * as Vue from 'vue'
 import { loadModule } from 'vue3-sfc-loader'
+import componentConfig from '../../../config'
 
 /**
  * 动态引入组件
@@ -56,23 +57,8 @@ const options = {
   },
 }
 
-const components = [
-  {
-    name: 'remote-component1',
-    remote: true,
-  },
-  {
-    name: 'local-button',
-    remote: false,
-  },
-  {
-    name: 'remote-component2',
-    remote: true,
-  },
-]
-
 const remoteComponent = ref([])
-for (const item of components) {
+for (const item of componentConfig) {
   if (!item.remote) {
     const localChild = batchDynamicComponents(item.name, import.meta.glob('@/components/**/*.vue'))
     remoteComponent.value.push(localChild)

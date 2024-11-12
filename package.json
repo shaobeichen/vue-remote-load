@@ -1,0 +1,14 @@
+{
+    "name": "vue-remote-load",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "preinstall": "npx only-allow pnpm",
+        "dev:c": "pnpm -F @vue-remote-load/consumer dev",
+        "dev:p": "pnpm -F @vue-remote-load/provider dev"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC"
+}

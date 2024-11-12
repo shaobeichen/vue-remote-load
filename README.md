@@ -27,9 +27,10 @@ const components = [
 
 # 生产者使用 (远程组件方)
 
+新建一个命令行窗口执行
+
 ```
-cd provider
-npm run dev
+pnpm dev:p
 ```
 
 # 消费者使用 (容器方)
@@ -37,9 +38,8 @@ npm run dev
 新建一个命令行窗口执行
 
 ```
-cd consumer
-npm i
-npm run dev
+pnpm install
+pnpm dev:c
 ```
 
 # 预览
